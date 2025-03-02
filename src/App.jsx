@@ -6,7 +6,8 @@ import AboutUs from "./assets/AboutUs/AboutUs"
 
 import Posts from "./assets/ListaPosts/PostsList"
 
-import NavBar from "./assets/NavBar/NavBar"
+import Layout from "./Layout/Layout"
+
 
 function App() {
 
@@ -14,9 +15,11 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" Component={HomePage} />
-          <Route path="/about" Component={AboutUs} />
-          <Route path="/posts" Component={Posts} />
+          <Route element={<Layout />}>
+            <Route path="/" Component={HomePage} />
+            <Route path="/about" Component={AboutUs} />
+            <Route path="/posts" Component={Posts} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </>
