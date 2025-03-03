@@ -20,16 +20,16 @@ const Posts = () => {
                         posts.map((post) => {
                             return (
                                 <div key={post.id} className="col-4 mb-4 mt-4">
-                                    {/* <NavLink> */}
-                                    <div className="card">
-                                        <div className="card-body">
-                                            <h4 className="card-title">{post.titolo}</h4>
-                                            <p className="card-text">{post.contenuto}</p>
+                                    <NavLink to={`/posts/${post.id}`}>
+                                        <div className="card">
+                                            <div className="card-body">
+                                                <h4 className="card-title">{post.titolo}</h4>
+                                                <p className="card-text">{post.contenuto}</p>
+
+                                            </div>
 
                                         </div>
-
-                                    </div>
-                                    {/* </NavLink> */}
+                                    </NavLink>
                                 </div>
                             )
                         })
