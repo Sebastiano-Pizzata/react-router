@@ -6,6 +6,8 @@ import AboutUs from "./assets/AboutUs/AboutUs"
 
 import Posts from "./assets/ListaPosts/PostsList"
 
+import SinglePost from "./assets/ListaPosts/SinglePost"
+
 import Layout from "./Layout/Layout"
 
 
@@ -19,6 +21,7 @@ function App() {
             <Route path="/" Component={HomePage} />
             <Route path="/about" Component={AboutUs} />
             <Route path="/posts" Component={Posts} />
+            <Route path="/posts/:id" Component={SinglePost} />
           </Route>
         </Routes>
       </BrowserRouter>
